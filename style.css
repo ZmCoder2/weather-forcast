@@ -1,1 +1,38 @@
+body {}
 
+
+/* Gives the Head Blue gradient background with white font */
+.header {
+    display: flex;
+    padding-left: 50%;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(55, 55, 204, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+
+/* Gives the Search for a City bold font */
+#searchCity {
+    font-weight: bold;;
+}
+
+#searchBar {
+    display: flex;
+    width: 40%;
+    margin: 10px;
+}
+
+
+.btn-outline-primary {
+    text-align: center;
+    color: #212529;
+    background: linear-gradient(90deg, rgba(45,91,171,1) 0%, rgba(54,141,242,1) 38%);;
+    border-color: lightblue;
+    
+}
+
+#searchBtn {
+    text-align: center;
+    display: flex;
+    width: 40%;
+    margin: 10px;
+  }
