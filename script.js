@@ -1,5 +1,6 @@
+// This function gives the id 'cities' to autocomplete the search bar for easier use for user
 $(function() {
-    var availableTags = [
+    var availableCities = [
       "Atlanta",
       "Denver",
       "Chicago",
@@ -9,139 +10,87 @@ $(function() {
       "San Francisco",
       "New York"
     ];
-    $("#searchBar input").autocomplete({
-      source: availableTags
+    $("#cities").autocomplete({
+      source: availableCities
     });
   });  
-  console.log(searchBar)
 
 
-// Atlanta
-// {
-//     "cloud_pct": 0,
-//     "temp": 26,
-//     "feels_like": 26,
-//     "humidity": 32,
-//     "min_temp": 24,
-//     "max_temp": 28,
-//     "wind_speed": 5.14,
-//     "wind_degrees": 190,
-//     "sunrise": 1681988456,
-//     "sunset": 1682035899
-//   }
+function renderWeather(weather) {
+
+  var resultsContainer = document.querySelector('#weatherResults');
+  // h2 for city name
+  var city = document.createElement('h2');
+  city.textContent = weather.name;
+  resultsContainer.append('weatherResults');
+  // h3 for date
+  // <p> for temp, wind, humidity
 
 
+  // Atlanta container
+  var atlWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(atlWeather);
+  console.log(weather);
 
-// Denver
-// {
-//   "cloud_pct": 100,
-//   "temp": 8,
-//   "feels_like": 5,
-//   "humidity": 23,
-//   "min_temp": 5,
-//   "max_temp": 10,
-//   "wind_speed": 4.47,
-//   "wind_degrees": 295,
-//   "sunrise": 1681992911,
-//   "sunset": 1682041329
-// }
+  var denWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(denWeather);
 
+  var chiWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(chiWeather);
 
+  var tampaWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(tampaWeather);
 
+  var dalWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(dalWeather);
 
-// Chicago
-// {
-//     "cloud_pct": 100,
-//     "temp": 25,
-//     "feels_like": 24,
-//     "humidity": 41,
-//     "min_temp": 17,
-//     "max_temp": 26,
-//     "wind_speed": 8.23,
-//     "wind_degrees": 190,
-//     "sunrise": 1681988563,
-//     "sunset": 1682037358
-//   }
+  var seaWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(seaWeather);
 
+  var sfWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(sfWeather);
 
-// Tampa
-// {
-//     "cloud_pct": 75,
-//     "temp": 28,
-//     "feels_like": 28,
-//     "humidity": 45,
-//     "min_temp": 24,
-//     "max_temp": 29,
-//     "wind_speed": 5.66,
-//     "wind_degrees": 80,
-//     "sunrise": 1681988397,
-//     "sunset": 1682035032
-//   }
+  var nyWeather = document.createElement('p');
+  details.append('Temp: ' + weather.main.temp + ' F');
+  details.append('Wind: ' + wind + ' MPH');
+  details.append('Humidity ' + main.humidity + ' %')
+  resultsContainer.append(nyWeather);
 
+}
 
+//fetch weather data for 
+function fetchWeather(query) {
+  var url = 'https://api.openweathermap.org/data/2.5/weather?q=London&appid=e52a29666bfe7798641471ef3c524f6e'
 
+fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data));
 
-// Dallas
-// {
-//     "cloud_pct": 75,
-//     "temp": 24,
-//     "feels_like": 24,
-//     "humidity": 66,
-//     "min_temp": 22,
-//     "max_temp": 26,
-//     "wind_speed": 6.69,
-//     "wind_degrees": 350,
-//     "sunrise": 1681991501,
-//     "sunset": 1682038803
-//   }
+}
+fetchWeather();
 
-
-
-// Seattle 
-// {
-//     "cloud_pct": 100,
-//     "temp": 8,
-//     "feels_like": 4,
-//     "humidity": 84,
-//     "min_temp": 6,
-//     "max_temp": 10,
-//     "wind_speed": 6.17,
-//     "wind_degrees": 150,
-//     "sunrise": 1681996274,
-//     "sunset": 1682046292
-//   }
+  //fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`)
 
 
-
-
-
-// San Francisco
-// {
-//     "cloud_pct": 40,
-//     "temp": 17,
-//     "feels_like": 16,
-//     "humidity": 52,
-//     "min_temp": 13,
-//     "max_temp": 23,
-//     "wind_speed": 9.77,
-//     "wind_degrees": 280,
-//     "sunrise": 1681997260,
-//     "sunset": 1682045348
-//   }
-
-
-
-
-// New York
-// {
-//     "cloud_pct": 0,
-//     "temp": 13,
-//     "feels_like": 12,
-//     "humidity": 58,
-//     "min_temp": 10,
-//     "max_temp": 18,
-//     "wind_speed": 5.36,
-//     "wind_degrees": 155,
-//     "sunrise": 1681985397,
-//     "sunset": 1682033976
-//   }
+  //Math.floor(data1.list[0].main.feels_like * 1.8 - 459.67)

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Weather Forecast</title>
 </head>
 
 <body>
@@ -21,7 +21,8 @@
                 <h1 id="searchCity">Search for a City:</h1>
                 <div class="ui-widget">
                     <div id="searchBar">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        <!-- Gave the input an id of 'cities' to autocomplete the search bar for the user -->
+                        <input id='cities' type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                             aria-describedby="search-addon" />
                     </div>
                     <button type="button" class="btn btn-outline-primary" id="searchBtn">Search</button>
@@ -39,10 +40,23 @@
         </div>
     </div>
 
+    <div id="weatherResults"></div>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <!-- Apply jQuery UI <script> tag here -->
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./script.js"></script>
+ 
 </body>
 
 </html>
+<!-- "Atlanta",
+      "Denver",
+      "Chicago",
+      "Tampa",
+      "Dallas",
+      "Seattle",
+      "San Francisco",
+      "New York" -->
+
+<!-- https://api.openweathermap.org/data/2.5/weather?q=London&appid=e52a29666bfe7798641471ef3c524f6e -->
