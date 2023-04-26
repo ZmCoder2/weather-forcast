@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Weather Forecast</title>
 </head>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <body>
     <h1 class="header">Weather Dashboard</h1>
-    <div class="container">
+    <div class="container-fluid position-relative">
         <div class="row">
             <div class="col-md-6">
-                <h1 id="searchCity">Search for a City:</h1>
-                <div class="ui-widget">
+                <h4 id="searchCity">Search for a City:</h4>
+             <div class="ui-widget">
                     <div id="searchBar">
                         <!-- Gave the input an id of 'cities' to autocomplete the search bar for the user -->
                         <input id='cities' type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -28,25 +28,94 @@
                     <button type="button" class="btn btn-outline-primary" id="searchBtn">Search</button>
                 </div>
             </div>
-
-            <!-- This is the card that is displayed to the right side of the search bar depending on the city the user chooses -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
+            <div class="row justify-content-end  position-absolute">
+                <div id="chosenCity" class="col-md-6">
+                    <div class="card mb-3" style="height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Main</h5>
+                            <p class="card-text">This is the Main card.</p>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="fiveDayForecast">5-Day Forecast:</h4>
+                <div id="fiveDays" class="row justify-content-end position-absolute top-100 start-75">
+                    <div class="col-md-2">
+                        <div class="card mb-3" style="height: 220px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 1</h5>
+                                <p class="card-text">This is the first card.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card mb-3" style="height: 220px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 2</h5>
+                                <p class="card-text">This is the second card.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card mb-3" style="height: 220px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3</h5>
+                                <p class="card-text">This is the third card.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card mb-3" style="height: 220px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 4</h5>
+                                <p class="card-text">This is the fourth card.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card mb-3" style="height: 220px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 5</h5>
+                                <p class="card-text">This is the fifth card.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+        <div class="list-group col-md-8">
+            <button type="button" class="list-group-item list-group-item-action hover"
+                aria-current="true">Atlanta</button>
+            <button type="button" class="list-group-item list-group-item-action hover"
+                aria-current="true">Denver</button>
+            <button type="button" class="list-group-item list-group-item-action hover"
+                aria-current="true">Chicago</button>
+            <button type="button" class="list-group-item list-group-item-action hover"
+                aria-current="true">Tampa</button>
+            <button type="button" class="list-group-item list-group-item-action hover"
+                aria-current="true">Dallas</button>
+            <button type="button" class="list-group-item list-group-item-action hover"
+                aria-current="true">Seattle</button>
+            <button type="button" class="list-group-item list-group-item-action hover" aria-current="true">San
+                Francisco</button>
+            <button type="button" class="list-group-item list-group-item-action hover" aria-current="true">New
+                York</button>
+        </div>
+        <div class="col-md-4"></div>
+
     </div>
+</body>
 
-    <div id="weatherResults"></div>
+<div id="weatherResults"></div>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <!-- Apply jQuery UI <script> tag here -->
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="./script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- Apply jQuery UI <script> tag here -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="./script.js"></script>
+<script src="https://api.openweathermap.org/data/2.5/weather?q={Atlanta}&appid={e52a29666bfe7798641471ef3c524f6e}"></script>
  
+
+
 </body>
 
 </html>

@@ -12,27 +12,56 @@ body {}
 
 /* Gives the Search for a City bold font */
 #searchCity {
-    font-weight: bold;;
+    font-weight: bold;
 }
 
 #searchBar {
     display: flex;
-    width: 40%;
+    width: 30%;
     margin: 10px;
 }
 
-
+/* got to fix the search in the button to display in the center */
 .btn-outline-primary {
-    text-align: center;
     color: #212529;
     background: linear-gradient(90deg, rgba(45,91,171,1) 0%, rgba(54,141,242,1) 38%);;
     border-color: lightblue;
-    
 }
 
 #searchBtn {
-    text-align: center;
     display: flex;
-    width: 40%;
+    width: 30%;
     margin: 10px;
+  }
+
+  .list-group {
+    width: 17%;
+    padding: 10px;
+  }
+
+  .list-group-item {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+  #chosenCity {
+    width: 81%;
+    padding-bottom: 2%;
+  }
+  
+  #fiveDays {
+    padding-left: 40px;
+  }
+
+  .fiveDayForecast {
+    padding-left: 20%;
+    font-weight: bold;
+  }
+
+  .card-body, #openweathermap-widget-15 {
+    width: 
   }
