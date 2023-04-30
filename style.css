@@ -1,5 +1,3 @@
-body {}
-
 
 /* Gives the Head Blue gradient background with white font */
 .header {
@@ -15,7 +13,7 @@ body {}
     font-weight: bold;
 }
 
-#searchBar {
+.ui-widget {
     display: flex;
     width: 30%;
     margin: 10px;
@@ -28,7 +26,7 @@ body {}
     border-color: lightblue;
 }
 
-#searchBtn {
+#btnSearch {
     display: flex;
     width: 30%;
     margin: 10px;
@@ -37,6 +35,7 @@ body {}
   .list-group {
     width: 17%;
     padding: 10px;
+  
   }
 
   .list-group-item {
@@ -46,15 +45,13 @@ body {}
 
   .card-body {
     text-align: center;
+    padding-bottom: 100px;
   }
 
-  #chosenCity {
-    width: 81%;
-    padding-bottom: 2%;
-  }
   
-  #fiveDays {
-    padding-left: 40px;
+  #fiveDayWeather div h3 {
+    font-size: 14px; 
+  
   }
 
   .fiveDayForecast {
@@ -62,6 +59,11 @@ body {}
     font-weight: bold;
   }
 
-  .card-body, #openweathermap-widget-15 {
-    width: 
-  }
+#weatherCards {
+  margin-left: 30%;
+  width: 60%;
+}
+
+.col-md-2 {
+  width: 20%;
+}
