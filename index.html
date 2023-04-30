@@ -18,81 +18,107 @@
         <div class="row">
             <div class="col-md-6">
                 <h4 id="searchCity">Search for a City:</h4>
+                <!-- Was trying to use the jQuery UI auto complete but it kept breaking with the openweather api
+                I kept the div because it was formatted accordingly and when I would get rid of it it would break so I kept it.-->
                 <div class="ui-widget">
-                    <!-- Gave the input an id of 'cities' to autocomplete the search bar for the user -->
                     <input id='citiesSearch' type="search" class="form-control rounded" placeholder="Search City"
                         aria-label="Search" aria-describedby="search-addon" />
                 </div>
                 <button type="button" class="btn btn-outline-primary" id="btnSearch">Search</button>
             </div>
         </div>
+        <!-- City buttons displayed on the left side of the page -->
         <div class="list-group col-md-8 position-relative">
-            <button type="button" class="list-group-item list-group-item-action hover"
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover"
                 aria-current="true">Atlanta</button>
-            <button type="button" class="list-group-item list-group-item-action hover"
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover"
                 aria-current="true">Denver</button>
-            <button type="button" class="list-group-item list-group-item-action hover"
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover"
                 aria-current="true">Chicago</button>
-            <button type="button" class="list-group-item list-group-item-action hover"
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover"
                 aria-current="true">Tampa</button>
-            <button type="button" class="list-group-item list-group-item-action hover"
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover"
                 aria-current="true">Dallas</button>
-            <button type="button" class="list-group-item list-group-item-action hover"
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover"
                 aria-current="true">Seattle</button>
-            <button type="button" class="list-group-item list-group-item-action hover" aria-current="true">San
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover" aria-current="true">San
                 Francisco</button>
-            <button type="button" class="list-group-item list-group-item-action hover" aria-current="true">New
+            <button id="btnCity" type="button" class="list-group-item list-group-item-action hover" aria-current="true">New
                 York</button>
         </div>
+        <!-- This is the card section for the weather data to be displayed -->
         <div id=weatherCards class="row justify-content-end position-absolute top-0 start-0">
             <div class="col">
-                <div class="card mb-3" style="height: 200px;">
+                <!-- Main card that displays current weather -->
+                <div class="card mb-3" style="height: 230px;">
                     <div class="card-body">
                         <h1 id="cityName"></h1>
+                        <p id="mainDate"></p>
                         <p id="temp"></p>
                         <p id="wind"></p>
                         <p id="hum"></p>
+                        <img id="weatherIcon" src="" alt="Weather Icon">
                     </div>
                 </div>
-                <div id="fiveDays" class="row align-items-center position-absolute top-100 start-0">
+                <!-- first card under the main card to display the next days weather -->
+                <div class="row align-items-center position-absolute top-100 start-0">
                     <h4 class="fiveDayForecast">5-Day Forecast:</h4>
                     <div class="col-md-2">
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">C1</h5>
-                                <div id="fiveDayWeather"></div>
+                                <h6 id="secondDay"></h6>
+                                <p id="secondDayTemp"></p>
+                                <p id="secondDayWind"></p>
+                                <p id="secondDayHum"></p>
+                                <img id="secondDayWeatherIcon" src="" alt="Weather Icon">
                             </div>
                         </div>
                     </div>
+                    <!-- second card under the main card to display the third day weather -->
                     <div id="forcastDiv2" class="col-md-2">
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">Card 2</h5>
-                                <div id="forcastDiv2"></div>
+                                <h6 id="thirdDay"></h6>
+                                <p id="thirdDayTemp"></p>
+                                <p id="thirdDayWind"></p>
+                                <p id="thirdDayHum"></p>
+                                <img id="thirdDayWeatherIcon" src="" alt="Weather Icon">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
+                        <!-- third card under the main card to display the fourth day weather -->
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">Card 3</h5>
-                                <p class="card-text"></p>
+                                <h6 id="fourthDay"></h6>
+                                <p id="fourthDayTemp"></p>
+                                <p id="fourthDayWind"></p>
+                                <p id="fourthDayHum"></p>
+                                <img id="fourthDayWeatherIcon" src="" alt="Weather Icon">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
+                        <!-- fourth card under the main card to display the fifth day weather -->
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">Card 4</h5>
-                                <p class="card-text"></p>
+                                <h6 id="fifthDay"></h6>
+                                <p id="fifthDayTemp"></p>
+                                <p id="fifthDayWind"></p>
+                                <p id="fifthDayHum"></p>
+                                <img id="fifthDayWeatherIcon" src="" alt="Weather Icon">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
+                        <!-- fifth card under the main card to display the sixth day weather -->
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">Card 5</h5>
-                                <p class="card-text"></p>
+                                <h6 id="sixthDay"></h6>
+                                <p id="sixthDayTemp"></p>
+                                <p id="sixthDayWind"></p>
+                                <p id="sixthDayHum"></p>
+                                <img id="sixthDayWeatherIcon" src="" alt="Weather Icon">
                             </div>
                         </div>
                     </div>
@@ -105,13 +131,3 @@
 <script src="script.js"></script>
 
 </html>
-<!-- "Atlanta",
-      "Denver",
-      "Chicago",
-      "Tampa",
-      "Dallas",
-      "Seattle",
-      "San Francisco",
-      "New York" -->
-
-<!-- https://api.openweathermap.org/data/2.5/weather?q=London&appid=e52a29666bfe7798641471ef3c524f6e -->

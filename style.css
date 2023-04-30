@@ -26,44 +26,50 @@
     border-color: lightblue;
 }
 
+/* gives the search button size and positioning */
 #btnSearch {
     display: flex;
     width: 30%;
     margin: 10px;
   }
 
+  /* gives the list width and positioning */
   .list-group {
     width: 17%;
     padding: 10px;
-  
   }
 
+  /* aligns the text in the list in the center of the button */
   .list-group-item {
     margin-bottom: 10px;
     text-align: center;
   }
 
+/* aligns the text in the cards to the center */
   .card-body {
     text-align: center;
     padding-bottom: 100px;
   }
 
-  
+/* Font size for the cards */
   #fiveDayWeather div h3 {
     font-size: 14px; 
-  
   }
 
+/* positioning for the '5-Day forecast:' */
   .fiveDayForecast {
     padding-left: 20%;
     font-weight: bold;
   }
 
+  /* sizing for the main card */
 #weatherCards {
   margin-left: 30%;
   width: 60%;
 }
 
+/* Sizing for the cards under the main card */
 .col-md-2 {
   width: 20%;
+  height: fit-content;
 }
