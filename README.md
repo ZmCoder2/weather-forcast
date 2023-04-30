@@ -8,3 +8,6 @@ On the left side of the page, is a search text box that allows the user to type 
 
 ## The Application
 ![Screenshot 2023-04-30 at 6 04 44 PM](https://user-images.githubusercontent.com/126508376/235378563-46ab75de-6941-46ea-b783-80d6eed92e70.png)
+
+## https://github.com/ZmCoder2/weather-forecast.git
+## https://zmcoder2.github.io/weather-forecast/
